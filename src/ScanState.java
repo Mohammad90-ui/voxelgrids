@@ -1,6 +1,6 @@
-public enum Scanstate {
+public enum ScanState {
         IDLE,
         RUNNING,
         COMPLETED,
-        CANCELED;
+        CANCELLED;
 }

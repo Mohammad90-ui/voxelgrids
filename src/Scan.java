@@ -4,7 +4,7 @@ public class Scan{
     private final int duration;
     private final boolean pause;
 
-    private volatile Scanstate state = Scanstate.IDLE;
+    private volatile ScanState state = ScanState.IDLE;
 
     public Scan(int id, String name, int duration, boolean pause){
         this.id = id;
@@ -17,7 +17,8 @@ public class Scan{
     public String getName() {return name;}
     public int getDuration() {return duration;}
     public boolean isPause() {return pause;}
-    public Scanstate getState() {return state;}
+    public ScanState getState() {return state;}
+    public void setState(ScanState state) { this.state = state; }
 
     @Override
     public String toString(){

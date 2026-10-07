@@ -27,4 +27,20 @@ public class ScanController {
         return !exited;
     }
 
+    private void remove(int id){
+        if(running == true){
+            System.out.println("Scan is running");
+        }else if(current != null) {
+            current.setState(ScanState.RUNNING);
+            current = null;
+        }
+    }
+    private void exit() {
+        exited = true;
+        if (current != null) {
+            current.setState(ScanState.CANCELLED);
+            current = null;
+        }
+        System.out.println("Exit");
+    }
 }
