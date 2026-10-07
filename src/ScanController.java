@@ -27,7 +27,7 @@ public class ScanController {
         return !exited;
     }
 
-    private void remove(int id){
+    private void remove(String id){
         if(running == true){
             System.out.println("Scan is running");
         }else if(current != null) {
